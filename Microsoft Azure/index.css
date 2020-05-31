@@ -1,0 +1,945 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    /* background-color: #6dabed; */
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+}
+
+.gridPrincipal {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 6% 6% 88%;
+}
+
+.barraPrincipal {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-color: #1f2327;
+}
+
+.barraSecundaria {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    background-color: #282d32;
+}
+
+.menuLateral {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-color: #282d32;
+}
+
+.principal {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    background-color: #2a81ac;
+}
+
+.gridBarraPrincipal {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 100%;
+    /* border: 1px solid black; */
+}
+
+.titulo {
+    display: flex;
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+.titulo > h1 {
+    margin-bottom: 20px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.titulo > img {
+    margin-top: 12px;
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+.pesquisa {
+    grid-column: 3/4;
+    background-color: #34393c;
+    display: flex;
+    order: 0;
+    align-items: center;
+}
+
+.pesquisa > img { 
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+    order: 1;
+}
+
+.botoes {
+    grid-column: 4/5;
+    /* background-color: yellowgreen; */
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 100%;
+    /* border: 2px solid blueviolet; */
+}
+
+.notificacao {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    /* border: 2px solid chartreuse; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid white;
+}
+
+.notificacao > img {
+    width: 55%;
+    height: 75%;
+}
+
+.edicao {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    /* border: 2px solid cornflowerblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid white;
+}
+
+.edicao > img {
+    width: 40%;
+    height: 75%;
+}
+
+.configuracao {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    /* border: 2px solid crimson; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid white;
+}
+
+.configuracao > img {
+    width: 45%;
+    height: 75%;
+}
+
+.about {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    /* border: 2px solid darkkhaki; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.about > img {
+    width: 60%;
+    height: 100%;
+}
+
+.usuario {
+    grid-column: 5/6;
+    grid-row: 1/2;
+    display: flex;
+    justify-self: end;
+}
+
+.nome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.nome > span {
+    font-size: larger;
+    color: white;
+}
+
+.avatar {
+    width: 80px;
+    height: 56px;
+    text-align: center;
+    align-self: center;
+}
+
+.avatar > img {
+    width: 80px;
+    height: 55px;
+}
+
+.titulo > h1{
+    font-size: 30px;
+    margin-top: 8px;
+    margin-left: 30px;
+    display: inline-flex;
+    color: #12aec0;
+}
+
+.titulo > span {
+    font-size: x-large;
+    color: white;
+    margin-left: 11px;
+}
+
+.pesquisa > input {
+    background-color: #34393c;
+    height: 100%;
+    width: 100%;
+    border: 0px;
+}
+
+::placeholder {
+    color: white;
+    font-size: larger;
+    font-family: sans-serif;
+    font-style: italic;
+    padding-left: 15px;
+}
+
+.gridBarraSecundaria {
+    display: grid;
+    grid-template-columns: 1fr 0.6fr 3.39fr;
+    grid-template-rows: 100%;
+    /* border: 1px solid white; */
+}
+
+.sanduiche {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border-right: 0.05px solid grey;
+}
+
+.tracinho {
+    background-color: white;
+    border-radius: 5px;
+    width: 25px;
+    height: 2px;
+    margin-bottom: 5px;
+}
+
+.boxTracinho {
+    padding-left: 35px;
+    padding-top: 5px;
+}
+
+.dashBoard {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.dashBoard > span {
+    color: white;
+    font-size: larger;
+    margin-left: 40px;
+    margin-top: 7px;
+}
+
+.barrinha {
+    background-color: white;
+    width: 1px;
+    height: 37px;
+    margin-left: 90px;
+    margin-top: 5px;
+}
+
+.edit {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    /* background-color: mediumpurple; */
+    display: flex;
+    align-items: center;
+}
+
+.edit > img {
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+}
+
+.edit > span {
+    color: #bec0c2;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: large;
+}
+
+.gridAreaPrincipal {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr 1.1fr;
+    grid-template-rows: repeat(6,16%);
+    gap: 7px;
+    height: 90%;
+    width: 80%;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.box1 {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    background-color: white;
+}
+
+.box1 > .conteudo {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 20% 80%;
+    margin: 4%;
+}
+.box1 > .conteudo > .win {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+}
+
+.box1 > .conteudo > .win > #titulo {
+    font-size: 22px;
+}
+
+.box1 > .conteudo > .win > #subTitulo {
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.box1 > .conteudo > .grafico {
+    margin-top: 6%;
+    grid-column: 1/2;
+    grid-row: 2/2;
+}
+
+.box1 > .conteudo > .grafico > img {
+    margin-top: 4%;
+    width: 140px;
+    height: 140px;
+}
+
+.box1 > .conteudo > .dados { 
+    display: flex;
+    flex-direction: column;
+    margin-top: 6%;
+    grid-column: 2/2;
+    grid-row: 2/2;
+}
+
+.box1 > .conteudo > .dados > #texto { 
+    padding-left: 10px;
+    border-left: 7px solid #20bcee;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.box1 > .conteudo > .dados > #numero { 
+    padding-left: 10px;
+    border-left: 7px solid #20bcee;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.box1 > .conteudo > .dados > #numero > #usd { 
+    font-size: 15px;
+}
+
+.box1 > .conteudo > .dados > .daysLeft {
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box1 > .conteudo > .dados > .daysLeft > #texto { 
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.box1 > .conteudo > .dados > .daysLeft > #numero { 
+    font-size: 35px;
+    font-weight: bold;
+}
+
+
+.box2 {
+    grid-column: 3/4;
+    grid-row: 1/5;
+    background-color: white;
+    
+}
+
+.box2 > .conteudo {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 60% 20%;
+}
+
+.box2 > .conteudo > #cabecalho {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-self: center;
+    justify-self: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.box2 > .conteudo > #cabecalho > #cpu{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.box2 > .conteudo > #cabecalho > #cpu > #percentToday{
+    font-size: 18px;
+}
+
+.box2 > .conteudo > #cabecalho > #azure{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.box2 > .conteudo > #cabecalho > #edit{
+    color: lightskyblue;
+    font-size: 15px;
+    font-weight: bolder;
+    align-self: flex-end;
+}
+
+.box2 > .conteudo > #grafico {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+}
+
+.box2 > .conteudo > #grafico > img {
+    width: 100%;
+    height: 100%;
+}
+
+.box2 > .conteudo > #dados {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    width: 90%;
+    justify-self: center;
+}
+
+.box2 > .conteudo > #dados > #cpu{
+    border-left: 8px solid blue;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.box2 > .conteudo > #dados > #numero {
+    border-left: 8px solid blue;
+    font-size: 55px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.box2 > .conteudo > #dados > #numero > #percent{
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: -5px;
+}
+
+
+.box3 {
+    grid-column: 4/5;
+    grid-row: 1/5;
+    background-color: white;
+}
+
+.box3 > .conteudo {
+    margin: 5%;
+    width: 90%;
+    height: 95%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 50% 20% 20%;
+}
+
+.box3 > .conteudo > #titulo {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.box3 > .conteudo > #titulo > #data {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.box3 > .conteudo > #titulo > #portal {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.box3 > .conteudo > #grafico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.box3 > .conteudo > #grafico > img {
+    width: 90%;
+    height: 100%;
+}
+
+.box3 > .conteudo > #current {
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.box3 > .conteudo > #current > #texto {
+    padding-left: 10px;
+    border-left: 7px solid #20bcee;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.box3 > .conteudo > #current > #numero {
+    padding-left: 10px;
+    border-left: 7px solid #20bcee;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.box3 > .conteudo > #current > #numero > #gb {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: -7px;
+}
+
+.box3 > .conteudo > #tresh {
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.box3 > .conteudo > #tresh > #texto {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.box3 > .conteudo > #tresh > #numero {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.box3 > .conteudo > #tresh > #numero > #gb {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: -7px;
+}
+
+.box4 {
+    grid-column: 1/3;
+    grid-row: 3/5;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.box4 > .conteudo {
+    align-self: center;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box4 > .conteudo > #titulo {
+    display: flex;
+    flex-direction: column;
+}
+
+.box4 > .conteudo > #titulo > #service {
+    font-size: 28px;
+}
+
+.box4 > .conteudo > #titulo > #resource {
+    font-size: 15px;
+}
+
+.box4 > .conteudo > #mapa {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.box4 > .conteudo > #mapa > img{
+    height: 100%;
+    width: 70%;
+    align-self: flex-end;
+}
+
+.box5 {
+    grid-column: 1/2;
+    grid-row: 5/7;
+    background-color: white;
+}
+
+.box5 > .conteudo {
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 90%;
+    width: 90%;
+}
+
+.box5 > .conteudo > #titulo {
+    display: flex;
+    flex-direction: column;
+}
+
+.box5 > .conteudo > #titulo > #part {
+    font-size: 23px;
+}
+
+.box5 > .conteudo > #titulo > #web {
+    font-size: 18px;
+}
+
+.box5 > .conteudo > #running {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.box5 > .conteudo > #running > #titulo{
+    font-size: 17px;
+}
+
+.box5 > .conteudo > #running > #globo {
+    display: flex;
+}
+
+.box5 > .conteudo > #running > #globo > img {
+    width: 65px;
+    height: 55px;
+}
+
+.box6 {
+    grid-column: 2/3;
+    grid-row: 5/6;
+    background-color: white;
+}
+
+.box6 > .conteudo {
+    margin: 4%;
+    width: 90%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box6 > .conteudo > #titulo {
+    display: flex;
+    flex-direction: column;
+}
+
+.box6 > .conteudo > #titulo > #accounts {
+    font-size: 18px;
+}
+
+.box6 > .conteudo > #titulo > #data {
+    font-size: 18px;
+}
+
+.box6 > .conteudo > #online {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.box6 > .conteudo > #online > #texto {
+    font-size: 15px;
+}
+
+.box6 > .conteudo > #online > img {
+    width: 45px;
+    height: 50px;
+}
+
+.box7 {
+    grid-column: 2/3;
+    grid-row: 6/7;
+    background-color: white;
+}
+
+.box7 > .conteudo {
+    margin: 4%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box7 > .conteudo > #one {
+    font-size: 18px;
+}
+
+.box7 > .conteudo > #web {
+    font-size: 18px;
+}
+
+.box7 > .conteudo > #stopped {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.box7 > .conteudo > #stopped > #texto {
+    font-size: 15px;
+}
+
+.box7 > .conteudo > #stopped > img {
+    width: 45px;
+    height: 40px;
+}
+
+.box8 {
+    grid-column: 3/4;
+    grid-row: 5/6;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box8 > .conteudo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.box8 > .conteudo > #help {
+    font-size: 25px;
+}
+
+.box8 > .conteudo > img {
+    height: 70px;
+    width: 70px;
+}
+
+.box9 {
+    grid-column: 3/4;
+    grid-row: 6/7;
+    background-color: white;
+    display: flex;
+}
+
+.box9 > img {
+    height: 100%;
+    width: 100%;
+}
+
+.miniGrid {
+    display: flex;
+    grid-column: 4/5;
+    grid-row: 5/7;
+    flex-flow: wrap;
+    /* background-color: blue; */
+}
+
+.box10 {
+    background-color: white;
+    width: 150px;
+    height: 124px;
+    display: flex;
+    justify-content: center;
+}
+
+.box10 > .conteudo { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box10 > .conteudo > #texto {
+    font-size: 20px;
+}
+
+.box10 > .conteudo > #about  {
+    display: flex;
+    justify-items: center;
+    align-self: center;
+}
+
+.box10 > .conteudo > #about > img {
+    height: 65px;
+    width: 65px;
+}
+
+.box11 {
+    background-color: white;
+    margin-left: 7px;
+    width: 150px;
+    height: 124px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box11 > .conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
+.box11 > .conteudo > #feed {
+    display: flex;
+}
+
+.box11 > .conteudo > #feed > img {
+    height: 65px;
+    width: 75px;
+}
+
+.box11 > .conteudo > #texto {
+    font-size: 20px;
+}
+
+.box12 {
+    margin-top: 7px;
+    background-color: white;
+    width: 150px;
+    height: 124px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box12 > .conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
+.box12 > .conteudo > #market {
+    display: flex;
+    justify-content: center;
+}
+
+.box12 > .conteudo > #market > img {
+    height: 65px;
+    width: 60px;
+}
+
+.box12 > .conteudo > #texto {
+    font-size: 20px;
+}
+
+
+.divMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.divMenu > ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.new {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    background-color: #424242;
+}
+
+.new > img {
+    padding-left: 32px;
+    width: 30px;
+    height: 30px;
+}
+
+.new > span {
+    margin-left: 18px;
+    color: white;
+}
+
+.browse {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.browse > img {
+    padding-left: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.browse > span {
+    margin-left: 40px;
+    color: white;
+}
+
+.divMenu > ul > li {
+    color: white;
+    list-style-type: none;
+    font-size: 20px;
+    margin-bottom: 28px;
+}
+
+ul > li > img {
+    width: 30px;
+    height: 30px;
+}
+
+ul > li {
+    display: flex;
+    align-items: center;
+    margin-left: 32px;
+}
+
+ul > li > span {
+    margin-left: 15px;
+}
